@@ -2244,6 +2244,12 @@ objects:
               success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided
               by a thousand to get a double. That is, if the desired factor is 1.9, the
               runtime value should be 1900. Defaults to 1900.
+      - !ruby/object:Api::Type::String
+        name: 'portName'
+        description: |
+          Name of backend port. The same name should appear in the instance
+          groups referenced by this service. Can be set when load balancing
+          scheme is EXTERNAL or INTERNAL_MANAGED.
       - !ruby/object:Api::Type::Enum
         name: 'protocol'
         description: |
